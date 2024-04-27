@@ -4,6 +4,13 @@
 
 ShowTime is a popular platform that allows users to browse and book tickets for movies.Also lets users to rent or buy movie.
 
+## DOCUMENTATION
+
+1. SRS Document- https://drive.google.com/file/d/1bCWNBTSMW3OB7G3yqsLRN9p_Wmmjy_LT/view?usp=sharing
+2. Taiga Link- https://tree.taiga.io/project/202312080-showtime/admin/project-profile/details
+3. Presentation Link- https://docs.google.com/presentation/d/1F5JLlQ60tzLIJnZICAIfH1IQPzDKDJAV/edit?usp=sharing&ouid=117165393810576758187&rtpof=true&sd=true
+
+
 ## Key Features
 
 ### Home Page
