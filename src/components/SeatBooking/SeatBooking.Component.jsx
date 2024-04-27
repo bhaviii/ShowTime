@@ -23,7 +23,7 @@ const DynamicTable = ({ data, columns }) => {
   return (
     <div>
       <div class="p-5 h-screen bg-gray-100">
-        <h1 class="text-xl mb-2">Cinema List</h1>
+        <h1 class="text-3xl mb-2 text-center">Cinema List</h1>
 
         <div class="overflow-auto rounded-lg shadow hidden md:block">
           <table class="w-full">
@@ -32,8 +32,18 @@ const DynamicTable = ({ data, columns }) => {
                 <th class="w-20 p-3 text-sm font-semibold tracking-wide text-left">
                   No.
                 </th>
-                <th class="p-3 text-sm font-semibold tracking-wide text-left">
+                <th
+                  class="p-1 text-sm font-semibold tracking-wide text-center"
+                  colSpan={2}
+                >
                   Details
+                </th>
+                <th
+                  class="p-3 text-sm font-semibold tracking-wide text-center"
+                  colSpan={5}
+                >
+                  {" "}
+                  Time-Slots
                 </th>
               </tr>
             </thead>
@@ -50,19 +60,31 @@ const DynamicTable = ({ data, columns }) => {
                     </td>
                   ))}
                   <td class=" px-4 py-2 bg-green-500 font-semibold ">
-                    <button onClick={() => toSeats(row, 9.0)}>09.00am</button>
+                    <button onClick={() => toSeats(row, "9.00 AM")}>
+                      09.00am
+                    </button>
                   </td>
                   <td class="p-3 text-green-500 bg-slate-100 font-medium ">
-                    <button onClick={() => toSeats(row, 9.3)}> 09.30am</button>
+                    <button onClick={() => toSeats(row, "11.30 AM")}>
+                      {" "}
+                      11.30am
+                    </button>
                   </td>
                   <td class=" px-4 py-2 bg-green-500 font-semibold ">
-                    <button onClick={() => toSeats(row, 12.0)}>12.00pm</button>
+                    <button onClick={() => toSeats(row, "01.00 PM")}>
+                      01.00pm
+                    </button>
                   </td>
                   <td class="p-3 text-green-500 bg-slate-100  font-medium">
-                    <button onClick={() => toSeats(row, 3.15)}> 03.15pm</button>
+                    <button onClick={() => toSeats(row, "03.15 PM")}>
+                      {" "}
+                      03.15pm
+                    </button>
                   </td>
                   <td class=" px-4 py-2 bg-green-500 font-semibold  ">
-                    <button onClick={() => toSeats(row, 6.3)}>06.30pm</button>
+                    <button onClick={() => toSeats(row, "06.30 PM")}>
+                      06.30pm
+                    </button>
                   </td>
                 </tr>
               ))}

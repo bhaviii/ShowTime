@@ -41,8 +41,7 @@ function NavLg() {
         <div className="flex items-center w-1/2 gap-3">
           <div className="w-10 h-10">
             <a href="/Home.Page">
-              <img src="asd" alt="dasdasd"></img>
-              <img src={logo} alt="logo" className="w-full h-full" />
+              <img src={logo} alt="ShowTimeLogo" className="w-10 h-10" />
             </a>
           </div>
           <div className="w-full flex items-center gap-3 bg-white px-3 py-1 rounded-md">
@@ -63,9 +62,6 @@ function NavLg() {
               ? `Hi, ${JSON.parse(localStorage.getItem("user")).given_email}`
               : "Sign In"}
           </button>
-          <div className="w-8 h-8 text-white">
-            <BiMenu className="w-full h-full" />
-          </div>
         </div>
       </div>
     </>

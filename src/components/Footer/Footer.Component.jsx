@@ -27,8 +27,8 @@ const Footer = () => {
       <div className="container mx-auto flex flex-wrap justify-center lg:justify-between">
         <div className="w-full lg:w-1/4 mb-8 lg:mb-0 text-center lg:text-left">
           <h3 className="text-xl lg:text-xl font-semibold mb-4">Contact Us</h3>
-          <p>Email: info@example.com</p>
-          <p>Phone: +123 456 7890</p>
+          <p>Email: Showtime@gmail.com</p>
+          <p>Phone: +917984641639</p>
         </div>
         <div className="w-full lg:w-1/4 mb-8 lg:mb-0 text-center lg:text-left">
           <h3 className="text-xl lg:text-xl font-semibold mb-4">Follow Us</h3>

@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import ErrorImage from "../Screenshots/404.png";
 import { getAllUser } from "../user/getuser";
+import { Link, Navigate, useNavigate } from "react-router-dom";
+
 const ErrorPage = () => {
   useEffect(() => {
     getAllUser()

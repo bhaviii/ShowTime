@@ -13,31 +13,43 @@ const MovieSeatBooking = () => {
     } catch (error) {
       console.log("Error fetching movie name:", error);
     }
+    try {
+      const response = await axios.get(`/movie/${movieId}/images`);
+    } catch (error) {
+      console.log("error");
+    }
   }
-
-  //for payment model
-  const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
-  const [price, setTicketPrice] = useState(500); // Example ticket price
-
-  // Function to open the payment modal
-  const openPaymentModal = () => {
-    setIsPaymentModalOpen(true);
-  };
 
   const location = useLocation();
   const data = location.state;
   const id = data.id;
-  console.log(id);
-  const navigate = useNavigate();
-  const toTicket = () => {
-    // navigate("/ticket", { state: finalData });
-  };
+  //console.log(id);
 
   const [movieName, setMovieName] = useState("");
   fetchMovieName(id);
 
   const [selectedSeats, setSelectedSeats] = useState([]);
   const [selectedMovieIndex, setSelectedMovieIndex] = useState(0);
+
+  const finalData = {
+    id: id,
+    data: data,
+    seats: selectedSeats,
+  };
+  const navigate = useNavigate();
+  const toTicket = () => {
+    console.log(finalData);
+    navigate("/ticket", { state: finalData });
+  };
+  //for payment model
+  const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
+  const [price, setTicketPrice] = useState(0); // Example ticket price
+  // Function to open the payment modal
+  const openPaymentModal = () => {
+    if (price > 0) {
+      setIsPaymentModalOpen(true);
+    }
+  };
   useEffect(() => {
     const storedSelectedSeats = JSON.parse(
       localStorage.getItem("selectedSeats")
@@ -66,11 +78,12 @@ const MovieSeatBooking = () => {
       } else if (index.match(/[I-J]/i)) {
         ticketPrice += 400;
       }
-
       return index;
     });
 
     //console.log("Total Price:", price);
+    //console.log(seatsIndex);
+
     setTicketPrice(ticketPrice);
     localStorage.setItem("selectedSeats", JSON.stringify(seatsIndex));
     const selectedSeatsCount = selectedSeats.length;
@@ -98,6 +111,7 @@ const MovieSeatBooking = () => {
         isOpen={isPaymentModalOpen}
         setIsOpen={setIsPaymentModalOpen}
         price={price}
+        onSuccess={toTicket}
       />
       <div className="movie-container">
         <label>Movie Title : </label>

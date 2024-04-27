@@ -37,33 +37,26 @@ const HomePage = () => {
     };
     requestUpcomingMovies();
   }, []);
-  return (
+  /* return (
     <>
       <HeroCarousel />
       <div className="container mx-auto px-4 md:px-12 my-8">
         <PosterSlider
-          title="Recommended Movies"
-          subtitle="List of Recommended Movies"
+          title="Now Playing Movies"
+          subtitle="List of Movies"
           posters={recommendedMovies}
           isDark={false}
         />
       </div>
     </>
-  );
-  /*return (
+  );*/
+  return (
     <>
       <HeroCarousel />
       <div className="container mx-auto px-4 md:px-12 my-8">
-        <h1 className="text-2xl font-bold text-gray-800 sm:ml-3 my-3">
-          The Best of Entertainment
-        </h1>
-        <EntertainmentCardSlider />
-      </div>
-
-      <div className="container mx-auto px-4 md:px-12 my-8">
         <PosterSlider
-          title="Recommended Movies"
-          subtitle="List of Recommended Movies"
+          title="Now Playing Movies"
+          subtitle="List of  Movies"
           posters={recommendedMovies}
           isDark={false}
         />
@@ -95,7 +88,7 @@ const HomePage = () => {
         />
       </div>
     </>
-  );*/
+  );
 };
 
 export default DefaultlayoutHoc(HomePage);

@@ -2,6 +2,7 @@ import React, { useState, createContext } from "react";
 export const MovieContext = createContext();
 
 const MovieProvider = ({ children }) => {
+  const onSuccess = () => {};
   const [movie, setMovie] = useState({
     id: 0,
     original_title: "",
@@ -14,11 +15,13 @@ const MovieProvider = ({ children }) => {
   const rentMoive = () => {
     setIsOpen(true);
     setPrice(149);
+    onSuccess();
   };
 
   const buyMoive = () => {
     setIsOpen(true);
     setPrice(599);
+    onSuccess();
   };
   const bookTickets = () => {
     setIsOpen(true);

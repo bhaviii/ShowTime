@@ -77,8 +77,10 @@ function NavLg({ defaultLocation }) {
     <>
       <div className="container flex mx-auto px-4 items-center justify-between">
         <div className="flex items-center w-1/2 gap-3">
-          <div className="w-10 h-10">
-            <img src={logo} alt="logo" className="w-auto h-auto" />
+          <div className="w-10 h-10 items-stretch">
+            <a href="/">
+              <img src={logo} alt="logo" style={{ height: 50, width: 100 }} />
+            </a>
           </div>
           <div className="w-full flex items-center gap-3 bg-white px-3 py-1 rounded-md">
             <BiSearch />
@@ -94,10 +96,6 @@ function NavLg({ defaultLocation }) {
             {location || "Select you..."} <BiChevronDown />
           </span>
           <CustomModal />
-
-          <div className="w-8 h-8 text-white">
-            <BiMenu className="w-full h-full" />
-          </div>
         </div>
       </div>
     </>

@@ -251,7 +251,7 @@ const MoviePage = () => {
             <div className="my-8">
               <PosterSlider
                 config={settings}
-                title="BMS XCLUSICE"
+                title="ShowTime XCLUSICE"
                 posters={similarMovies}
                 isDark={false}
                 onMovieClick={handleMovieClick}

@@ -22,6 +22,7 @@ function App() {
       <Route path="*" element={<ErrorPage />} />
       <Route path="/booking" element={<SeatBooking />} />
       <Route path="/seats" element={<CinemaSeatLayout />} />
+      <Route path="/ticket" element={<Ticket />} />
     </Routes>
   );
 }

@@ -3,7 +3,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import logo from "../Images/logo_app.png";
 
-const PaymentModel = ({ setIsOpen, isOpen, price }) => {
+const PaymentModel = ({ setIsOpen, isOpen, price, onSuccess }) => {
   const closeModal = () => {
     setIsOpen(false);
   };
@@ -18,6 +18,7 @@ const PaymentModel = ({ setIsOpen, isOpen, price }) => {
       image: logo,
       handler: () => {
         setIsOpen(false);
+        onSuccess();
         alert("Payment Succesfull!");
       },
       theme: { color: "#c4242d" },

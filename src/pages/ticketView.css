@@ -8,10 +8,8 @@
 }
 
 .bodyy {
-	height: 10px;
-	display: flex;
-    margin-left: 10%;
-    margin-top: 3%;
+	height: 100vh;
+	display: grid;
 	font-family: "Staatliches", cursive;
 	background: #d83565;
 	color: black;
@@ -33,7 +31,6 @@
 .image {
 	height: 250px;
 	width: 250px;
-	background-image: url("https://media.pitchfork.com/photos/60db53e71dfc7ddc9f5086f9/1:1/w_1656,h_1656,c_limit/Olivia-Rodrigo-Sour-Prom.jpg");
 	background-size: contain;
 	opacity: 0.85;
 }
@@ -96,9 +93,9 @@
 	text-align: right;
 }
 
-.date .june-29 {
+.date .curr-date {
 	color: #d83565;
-	font-size: 20px;
+	font-size: 15px;
 }
 
 .show-name {
